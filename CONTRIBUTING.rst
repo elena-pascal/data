@@ -58,11 +58,18 @@ Ready to contribute? Here's how to set up `dials_data` for local development.
 
     $ git clone git@github.com:your_name_here/data.git
 
-3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
+3.  You will need a virtual environment tool for this step. We use `virtualenvwrapper <https://virtualenvwrapper.readthedocs.io/en/latest/install.html>`_ here::
 
-    $ mkvirtualenv dials_data
-    $ cd dials_data/
-    $ python setup.py develop
+    $ pip install virtualenvwrapper
+    $ export WORKON_HOME=$HOME/.virtualenvs
+    $ export PROJECT_HOME=$HOME/Devel
+    $ source /usr/local/bin/virtualenvwrapper.sh
+    
+    Install your local copy into the virtualenv. Then this is how you set up your fork for local development::
+
+        $ mkvirtualenv dials_data
+        $ cd data/
+        $ python setup.py develop
 
 4. Create a branch for local development::
 
